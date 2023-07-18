@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react';
+import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
 
-export default function ThemeToggle() {
-	const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'dark');
+export default function ThemeToggle({ size }: { size: string }) {
+	const [theme, setTheme] = useState('dark');
 
 	const handleClick = () => {
-		setTheme(theme === 'light' ? 'dark' : 'light');
+		setTheme(theme === 'dark' ? 'light' : 'dark');
 	};
+
+	useEffect(() => {
+		setTheme(localStorage.getItem('theme') ?? 'dark');
+	}, []);
 
 	useEffect(() => {
 		if (theme === 'dark') {
@@ -17,6 +22,12 @@ export default function ThemeToggle() {
 	}, [theme]);
 
 	return (
-		<button onClick={handleClick}>{theme === 'light' ? '🌙' : '🌞'}</button>
+		<button className="pt-1 md:mr-2" onClick={handleClick}>
+			{theme === 'dark' ? (
+				<SunIcon className={`text-white h-${size} w-${size}`} />
+			) : (
+				<MoonIcon className={`text-black h-${size} w-${size}`} />
+			)}
+		</button>
 	);
 }

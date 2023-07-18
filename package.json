@@ -12,9 +12,13 @@
   "dependencies": {
     "@astrojs/react": "^2.2.1",
     "@astrojs/tailwind": "^4.0.0",
+    "@heroicons/react": "^2.0.18",
+    "@octokit/graphql": "^7.0.1",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^2.8.2",
+    "framer-motion": "^10.12.22",
+    "lottie-react": "^2.4.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "tailwindcss": "^3.0.24"
