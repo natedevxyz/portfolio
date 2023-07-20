@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro'
 import ThemeToggle from '../components/ThemeToggle'
 import ReactAnimation from '../components/ReactAnimation';
 import GithubAnimation from '../components/GithubAnimation'
+import GithubLogo from '../components/GithubLogo';
 import { data } from '../utils/github'
 ---
 
@@ -15,23 +16,37 @@ import { data } from '../utils/github'
 		</div>
 		<ThemeToggle size='10' client:load/>
 	</header>
-	<main class="flex flex-col md:flex-row min-w-full justify-center items-center min-h-[60vh] md:min-h-[90vh]">
+	<main class="flex flex-col md:flex-row min-w-full justify-center items-center min-h-[90vh]">
 		<div class="max-w-[80%] md:max-w-[40%] md:-ml-20">
 			<ReactAnimation client:load/>
 		</div>
-		<div class="flex flex-col">
+		<div class="flex flex-col pb-10">
 			<div class="flex flex-col md:flex-row">
-				<h2 class="font-semibold text-4xl md:text-6xl text-black dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#358EF1] from-50% to-[#3178C6] to-80% md:mr-4">Typescript</span></h2>
-				<h2 class="font-semibold text-4xl md:text-6xl text-black dark:text-white">and <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#47C6EA] from-50% to-[#04A5D0] to-80%">React</span></h2>
+				<h2 class="font-semibold text-6xl text-black dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#358EF1] from-50% to-[#3178C6] to-80% md:mr-4">Typescript</span></h2>
+				<h2 class="font-semibold text-6xl text-black dark:text-white">and <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#47C6EA] from-50% to-[#04A5D0] to-80%">React</span></h2>
 			</div>
-			<h2 class="font-semibold text-4xl md:text-6xl text-black dark:text-white">web developer</h2>
+			<div class="flex flex-col md:flex-row">
+				<h2 class="font-semibold text-6xl text-black dark:text-white md:mr-4">web</h2>
+				<h2 class="font-semibold text-6xl text-black dark:text-white">developer</h2>
+			</div>
 		</div>
 	</main>
-	<section class="flex flex-col min-w-full md:flex-row justify-center items-center min-h-[50vh]">
-		<GithubAnimation from={0} to={data} client:load/>
-		<div class="flex flex-col md:ml-10 pb-2">
-			<p class="text-black dark:text-white text-5xl font-semibold">commits</p>
-			<p class="text-black dark:text-white text-4xl">the last year</p>
+	<section class="flex flex-col min-w-full justify-start items-center min-h-[65vh] md:min-h-[50vh]">
+		<div class="flex flex-col md:flex-row mb-5 mt-10 md:min-w-[33%] md:justify-evenly">
+			<div class="flex justify-center md:justify-end min-w-[12rem]">
+				<GithubAnimation from={0} to={data} client:load/>
+			</div>
+			<div class="flex flex-col md:pb-2">
+				<p class="text-black dark:text-white text-5xl font-semibold">commits</p>
+				<p class="text-black dark:text-white text-4xl">the last year</p>
+			</div>
+		</div>
+		<div class="flex flex-col md:flex-row items-center md:min-w-[33%] md:justify-evenly md:pr-2 mb-5">
+			<div class="flex flex-col mb-4 md:mb-0">
+				<p class="text-black dark:text-white text-4xl">check my</p>
+				<p class="text-black dark:text-white text-5xl">GitHub</p>
+			</div>
+			<GithubLogo size='8rem' client:load/>
 		</div>
 	</section>
 </Layout>
