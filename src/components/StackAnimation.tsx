@@ -93,7 +93,7 @@ export default function StackAnimation() {
 								transition={{ duration: 1 }}
 							>
 								<img
-									src={`/src/assets/logos/${item}.svg`}
+									src={`/src/icons/${item}.svg`}
 									className="w-[3rem] h-[3rem] md:w-[4rem] md:h-[4rem]"
 								/>
 							</motion.div>

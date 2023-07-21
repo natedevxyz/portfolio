@@ -6,7 +6,9 @@ import ReactAnimation from '../components/ReactAnimation';
 import GithubAnimation from '../components/GithubAnimation'
 import GithubLogo from '../components/GithubLogo';
 import StackAnimation from '../components/StackAnimation';
+import Project from '../components/Project.astro';
 import { data } from '../utils/github'
+import ethereumcl from '../assets/ethereumcl.jpg'
 ---
 
 <Layout title="Nate | React web developer">
@@ -52,5 +54,11 @@ import { data } from '../utils/github'
 	</section>
 	<section class="flex flex-col min-w-full justify-start min-h-[30vh] md:min-h-[38vh]">
 		<StackAnimation client:load>
+	</section>
+	<section class="flex flex-col items-center">
+		<h2 class="font-semibold text-4xl md:text-5xl text-black dark:text-white mb-10">Latest Projects</h2>
+		<Project title='Test' image={ethereumcl} imageName="ethereumcl" icons={['html5', 'css3']} url='https://www.ethereum.cl/' repository='ethereum-cl'>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum corporis possimus perspiciatis qui assumenda dolorem consectetur voluptatibus iusto at suscipit! Repudiandae eius aperiam aspernatur excepturi corporis assumenda officiis ratione esse aut ducimus voluptas voluptatum nesciunt ipsum autem totam veritatis fuga, veniam, placeat commodi cupiditate accusamus provident. Laudantium fugit vitae non!
+		</Project>
 	</section>
 </Layout>
