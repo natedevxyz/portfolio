@@ -5,6 +5,7 @@ import ThemeToggle from '../components/ThemeToggle'
 import ReactAnimation from '../components/ReactAnimation';
 import GithubAnimation from '../components/GithubAnimation'
 import GithubLogo from '../components/GithubLogo';
+import StackAnimation from '../components/StackAnimation';
 import { data } from '../utils/github'
 ---
 
@@ -32,7 +33,7 @@ import { data } from '../utils/github'
 		</div>
 	</main>
 	<section class="flex flex-col min-w-full justify-start items-center min-h-[65vh] md:min-h-[50vh]">
-		<div class="flex flex-col md:flex-row mb-5 mt-10 md:min-w-[33%] md:justify-evenly">
+		<div class="flex flex-col md:flex-row mb-5 mt-10 md:min-w-[33%] md:justify-evenly md:mr-5">
 			<div class="flex justify-center md:justify-end min-w-[12rem]">
 				<GithubAnimation from={0} to={data} client:load/>
 			</div>
@@ -41,12 +42,15 @@ import { data } from '../utils/github'
 				<p class="text-black dark:text-white text-4xl">the last year</p>
 			</div>
 		</div>
-		<div class="flex flex-col md:flex-row items-center md:min-w-[33%] md:justify-evenly md:pr-2 mb-5">
+		<div class="flex flex-col md:flex-row items-center md:min-w-[33%] md:justify-evenly md:pr-2 mb-5 md:mr-5">
 			<div class="flex flex-col mb-4 md:mb-0">
 				<p class="text-black dark:text-white text-4xl">check my</p>
 				<p class="text-black dark:text-white text-5xl">GitHub</p>
 			</div>
 			<GithubLogo size='8rem' client:load/>
 		</div>
+	</section>
+	<section class="flex flex-col min-w-full justify-start min-h-[30vh] md:min-h-[38vh]">
+		<StackAnimation client:load>
 	</section>
 </Layout>
