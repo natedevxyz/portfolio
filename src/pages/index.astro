@@ -9,6 +9,13 @@ import StackAnimation from '../components/StackAnimation';
 import Project from '../components/Project.astro';
 import { data } from '../utils/github'
 import ethereumcl from '../assets/ethereumcl.jpg'
+import yagmi from '../assets/yagmi.jpg'
+import tellus from '../assets/tellus.jpg'
+import desarrollalo from '../assets/desarrollalo.jpg'
+import { FaLinkedinIn, FaTwitter } from 'react-icons/fa' 
+import { Image } from 'astro:assets';
+import astroLight from '../assets/astro-light.png'
+import astroDark from '../assets/astro-dark.png'
 ---
 
 <Layout title="Nate | React web developer">
@@ -52,13 +59,42 @@ import ethereumcl from '../assets/ethereumcl.jpg'
 			<GithubLogo size='8rem' client:load/>
 		</div>
 	</section>
-	<section class="flex flex-col min-w-full justify-start min-h-[30vh] md:min-h-[38vh]">
+	<section class="flex flex-col min-w-full justify-start min-h-[30vh] md:min-h-[40vh] md:pl-5">
 		<StackAnimation client:load>
 	</section>
 	<section class="flex flex-col items-center">
 		<h2 class="font-semibold text-4xl md:text-5xl text-black dark:text-white mb-10">Latest Projects</h2>
-		<Project title='Test' image={ethereumcl} imageName="ethereumcl" icons={['html5', 'css3']} url='https://www.ethereum.cl/' repository='ethereum-cl'>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum corporis possimus perspiciatis qui assumenda dolorem consectetur voluptatibus iusto at suscipit! Repudiandae eius aperiam aspernatur excepturi corporis assumenda officiis ratione esse aut ducimus voluptas voluptatum nesciunt ipsum autem totam veritatis fuga, veniam, placeat commodi cupiditate accusamus provident. Laudantium fugit vitae non!
+		<Project title='NextJS app' image={ethereumcl} imageName="ethereumcl" icons={['nextjs', 'chakra', 'prisma', 'postgresql']} url='https://www.ethereum.cl/' repository='ethereum-cl'>
+			A web application developed using the Next.js framework, leveraging its pre-rendering capabilities. It's styled with Chakra UI for responsive design. Currently, this is an ongoing project aimed at contributing to the Spanish-speaking Ethereum open-source community.
+		</Project>
+		<Project title='React SPA' image={yagmi} imageName="yagmi" icons={['typescript', 'vite', 'tailwind', 'postgresql']} url='https://app.yagmi.finance/' repository='yagmi-vite'>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum corporis possimus perspiciatis qui assumenda dolorem consectetur voluptatibus iusto at suscipit! Repudiandae eius aperiam aspernatur excepturi corporis assumenda officiis ratione esse aut ducimus voluptas voluptatum nesciunt ipsum autem totam veritatis fuga, veniam, placeat commodi cupiditate accusamus provident.
+		</Project>
+		<Project title='Remix app' image={tellus} imageName="tellus" icons={['typescript', 'remix', 'tailwind', 'mongodb']} url='https://cooperate.telluscoop.com/' repository='dao-platform'>
+			The governance voting platform for a web3 startup on the Stellar Blockchain. Developed with the Remix framework, which facilitates effortless data retrieval from a MongoDB collection through its server-side rendering capabilities. The design aligns with the brand's guidelines and is styled using Tailwind CSS.
+		</Project>
+		<Project title='Static website' image={desarrollalo} imageName="desarrollalo" icons={['html5', 'css3', 'javascript']} url='https://desarrollalo.cl/' repository='desarrollalo.cl'>
+			A startup-inspired website, handcrafted exclusively with HTML and CSS. It features a responsive design tailored for different devices using media queries. The site includes a functional contact form and utilizes a bit of JavaScript to animate the interactive mobile menu.
 		</Project>
 	</section>
+	<footer class="flex flex-col md:flex-row min-h-[20vh] md:min-w-[90%] md:justify-between">
+		<div class="flex justify-center mb-6 md:mb-0 md:justify-start items-center space-x-4">
+			<a href="https://twitter.com/natedevxyz">
+				<FaTwitter className='text-black dark:text-white w-10 h-10' client:load/>
+			</a>
+			<a href="https://www.linkedin.com/in/n-sch/">
+				<FaLinkedinIn className='text-black dark:text-white w-10 h-10' client:load/>
+			</a>
+		</div>
+		<div class="flex flex-col justify-center">
+			<span class="text-black dark:text-white text-xl text-right">natedev.xyz &copy; {new Date().getFullYear()}</span>
+			<div class="flex items-center justify-center md:justify-end">
+				<span class="text-black dark:text-white text-lg mr-2">made with</span>
+				<a href="https://astro.build/">
+					<Image src={`../src/assets/astro-light.${astroLight.format}`} width={astroLight.width} height={astroLight.height} alt="Astro logo" class="hidden dark:block w-20"/>
+					<Image src={`../src/assets/astro-dark.${astroDark.format}`} width={astroDark.width} height={astroDark.height} alt="Astro logo" class="block dark:hidden w-20"/> 
+				</a>
+			</div>
+		</div>
+	</footer>
 </Layout>
