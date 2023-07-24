@@ -91,8 +91,8 @@ import { Icon } from 'astro-icon';
 			<div class="flex items-center justify-center md:justify-end">
 				<span class="text-black dark:text-white text-lg mr-2">made with</span>
 				<a href="https://astro.build/">
-					<Image src={`../src/assets/astro-light.${astroLight.format}`} width={astroLight.width} height={astroLight.height} alt="Astro logo" class="hidden dark:block w-20"/>
-					<Image src={`../src/assets/astro-dark.${astroDark.format}`} width={astroDark.width} height={astroDark.height} alt="Astro logo" class="block dark:hidden w-20"/> 
+					<Image src={astroLight.src} width={astroLight.width} height={astroLight.height} alt="Astro logo" class="hidden dark:block w-20"/>
+					<Image src={`../assets/astro-dark.${astroDark.format}`} width={astroDark.width} height={astroDark.height} alt="Astro logo" class="block dark:hidden w-20"/> 
 				</a>
 			</div>
 		</div>
