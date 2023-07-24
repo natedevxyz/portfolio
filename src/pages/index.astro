@@ -64,16 +64,16 @@ import { Icon } from 'astro-icon';
 	</section>
 	<section class="flex flex-col items-center">
 		<h2 class="font-semibold text-4xl md:text-5xl text-black dark:text-white mb-10">Latest Projects</h2>
-		<Project title='NextJS app' image={ethereumcl} imageName="ethereumcl" icons={['nextjs', 'chakra', 'prisma', 'postgresql']} url='https://www.ethereum.cl/' repository='ethereum-cl'>
+		<Project title='NextJS app' image={ethereumcl} icons={['nextjs', 'chakra', 'prisma', 'postgresql']} url='https://www.ethereum.cl/' repository='ethereum-cl'>
 			A web application developed using the Next.js framework, leveraging its pre-rendering capabilities. It's styled with Chakra UI for responsive design. This is an ongoing project aimed at contributing to the Spanish Ethereum open-source community.
 		</Project>
-		<Project title='React SPA' image={yagmi} imageName="yagmi" icons={['typescript', 'vite', 'tailwind', 'postgresql']} url='https://app.yagmi.finance/' repository='yagmi-vite'>
+		<Project title='React SPA' image={yagmi} icons={['typescript', 'vite', 'tailwind', 'postgresql']} url='https://app.yagmi.finance/' repository='yagmi-vite'>
 			A decentralized crowdfunding marketplace developed with React using Vite. The platform features a custom design implemented with Tailwind CSS. React Router handles dynamic routing and the infrastructure is backed by a serverless PostgreSQL database.
 		</Project>
-		<Project title='Remix app' image={tellus} imageName="tellus" icons={['typescript', 'remix', 'tailwind', 'mongodb']} url='https://cooperate.telluscoop.com/' repository='dao-platform'>
+		<Project title='Remix app' image={tellus} icons={['typescript', 'remix', 'tailwind', 'mongodb']} url='https://cooperate.telluscoop.com/' repository='dao-platform'>
 			The governance voting platform for a web3 startup on the Stellar Blockchain. Developed with the Remix framework, which facilitates effortless data retrieval from a MongoDB collection through its server-side rendering capabilities. Styled using Tailwind CSS.
 		</Project>
-		<Project title='Static website' image={desarrollalo} imageName="desarrollalo" icons={['html5', 'css3', 'javascript']} url='https://desarrollalo.cl/' repository='desarrollalo.cl'>
+		<Project title='Static website' image={desarrollalo} icons={['html5', 'css3', 'javascript']} url='https://desarrollalo.cl/' repository='desarrollalo.cl'>
 			A startup-inspired website, handcrafted exclusively with HTML and CSS. It features a responsive design tailored for different devices using media queries. The site utilizes a bit of JavaScript to animate the interactive mobile menu.
 		</Project>
 	</section>
@@ -92,7 +92,7 @@ import { Icon } from 'astro-icon';
 				<span class="text-black dark:text-white text-lg mr-2">made with</span>
 				<a href="https://astro.build/">
 					<Image src={astroLight.src} width={astroLight.width} height={astroLight.height} alt="Astro logo" class="hidden dark:block w-20"/>
-					<Image src={`../assets/astro-dark.${astroDark.format}`} width={astroDark.width} height={astroDark.height} alt="Astro logo" class="block dark:hidden w-20"/> 
+					<Image src={astroDark.src} width={astroDark.width} height={astroDark.height} alt="Astro logo" class="block dark:hidden w-20"/> 
 				</a>
 			</div>
 		</div>
