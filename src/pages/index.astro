@@ -12,10 +12,10 @@ import ethereumcl from '../assets/ethereumcl.jpg'
 import yagmi from '../assets/yagmi.jpg'
 import tellus from '../assets/tellus.jpg'
 import desarrollalo from '../assets/desarrollalo.jpg'
-import { FaLinkedinIn, FaTwitter } from 'react-icons/fa' 
 import { Image } from 'astro:assets';
 import astroLight from '../assets/astro-light.png'
 import astroDark from '../assets/astro-dark.png'
+import { Icon } from 'astro-icon';
 ---
 
 <Layout title="Nate | React web developer">
@@ -80,10 +80,10 @@ import astroDark from '../assets/astro-dark.png'
 	<footer class="flex flex-col md:flex-row min-h-[20vh] md:min-w-[90%] md:justify-between">
 		<div class="flex justify-center mb-6 md:mb-0 md:justify-start items-center space-x-4">
 			<a href="https://twitter.com/natedevxyz">
-				<FaTwitter className='text-black dark:text-white w-10 h-10' client:load/>
+				<Icon name="twitter" class='fill-black dark:fill-white w-12 h-12 md:mt-3'/>
 			</a>
 			<a href="https://www.linkedin.com/in/n-sch/">
-				<FaLinkedinIn className='text-black dark:text-white w-10 h-10' client:load/>
+				<Icon name="linkedin" class='fill-black dark:fill-white w-12 h-12 md:mt-3'/>
 			</a>
 		</div>
 		<div class="flex flex-col justify-center">
