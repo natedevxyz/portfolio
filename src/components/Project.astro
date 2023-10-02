@@ -2,26 +2,19 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
 
-export interface ImageMetadata {
-  src: string;
-  width: number;
-  height: number;
-  format: string;
-}
-
 export interface Props {
     title: string;
     image: ImageMetadata;
     icons: string[];
     url: string;
-    repository: string;
+    repository: string | boolean;
 }
 
 const { title, image, icons, url, repository } = Astro.props
 ---
 <div class="flex flex-col md:flex-row max-w-[90%] md:min-w-full justify-center items-start mb-10">
     <div class="md:max-w-[50%] mb-3 md:mb-0 shadow-md">
-        <Image src={image.src} width={image.width} height={image.height} alt="Project image" class="rounded-lg"/>
+        <Image src={image} width={image.width} height={image.height} alt="Project image" class="rounded-lg"/>
     </div>
     <div class="bg-white md:max-w-[30%] rounded-lg mb-6 md:ml-5 px-8 py-4 shadow-md">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
@@ -35,7 +28,8 @@ const { title, image, icons, url, repository } = Astro.props
         </p>
         <div class="flex items-center pb-3">
             <a href={url} class="mr-3 bg-[#1E90FF] rounded-lg px-3 py-1 text-white">Website</a>
-        <a href={`https://github.com/natedevxyz/${repository}`} class="bg-[#1E90FF] rounded-lg px-3 py-1 text-white">Repository</a>
+            {repository &&
+            <a href={`https://github.com/natedevxyz/${repository}`} class="bg-[#1E90FF] rounded-lg px-3 py-1 text-white">Repository</a>}
         </div>
     </div>
 </div>
